@@ -1,5 +1,15 @@
 # Chatgbt for Programming
 
+## Links
+<a href="https://chat.openai.com/chat" target="_blank">Chat GPT</a>
+<a href="https://platform.openai.com/playground" target="_blank">OpenAI Playground</a>
+<a href="https://platform.openai.com/examples/default-fix-python-bugs" target="_blank">OpenAI Bugfix Example</a>
+<a href="https://platform.openai.com/examples/default-python-docstring" target="_blank">OpenAI Documentation Example</a>
+
+
+
+
+
 ```mermaid
 graph LR
  A --- G[write simple functions]   
@@ -15,18 +25,9 @@ graph LR
 
 ```
 
-.
-.
-.
-.
-.
-.
-.
-.
+<br /><br /><br /><br /><br /><br />
 
-
-
-### write a simple function
+### write simple functions
 
 > write a python function that takes in a csv file with the columns: name, date of birth (YYYY-MM-DD), location. it filters out everyone who is older than 60 years and returns a list with all names. some names have Chinese characters.
 > 
@@ -47,14 +48,7 @@ def filter_by_age(csv_file):
 ```
 <a href="https://htmlpreview.github.io/?https://github.com/k4th4/chatgpt_for_programming/blob/main/Filter_CSV_By_Age_Names.html" target="_blank">Filter CSV By Age Names.html</a>
 
-.
-.
-.
-.
-.
-.
-.
-.
+<br /><br /><br /><br /><br /><br />
 
 ## Reduce typing work
 
@@ -82,16 +76,7 @@ Sarah Smith,1958-08-08,Paris
 <a href="https://htmlpreview.github.io/?https://github.com/k4th4/chatgpt_for_programming/blob/main/CSV_File_Data_Output.html" target="_blank">CSV File Data Output.html</a>
 
 
-.
-.
-.
-.
-.
-.
-.
-.
-
-
+<br /><br /><br /><br /><br /><br />
 
 
 ### boilerplate example (flask)
@@ -143,19 +128,10 @@ if __name__ == '__main__':
 ```
 
 <a href="https://htmlpreview.github.io/?https://github.com/k4th4/chatgpt_for_programming/blob/main/Flask_TTS_Pinyin_App.html" target="_blank">Flask TTS Pinyin App.html</a>
+<a href="https://replit.com/@KatharinaNi/flask-tts" target="_blank">Replit Example</a>
 
 
-
-.
-.
-.
-.
-.
-.
-.
-.
-
-
+<br /><br /><br /><br /><br /><br />
 
 ### write documentation
 
@@ -204,18 +180,7 @@ def filter_by_age(csv_file: str) -> List[str]:
 <a href="https://htmlpreview.github.io/?https://github.com/k4th4/chatgpt_for_programming/blob/main/Python_Code_Documentation_Elements.html" target="_blank">Python Code Documentation Elements.html</a>
 
 
-
-.
-.
-.
-.
-.
-.
-.
-.
-
-
-
+<br /><br /><br /><br /><br /><br />
 
 ## Get help when you are stuck
 
@@ -242,16 +207,8 @@ Result:
 
 
 <a href="https://htmlpreview.github.io/?https://github.com/k4th4/chatgpt_for_programming/blob/main/Convert%20Chinese%20to%20Pinyin.html" target="_blank">Function Explainer.html</a>
-.
-.
-.
-.
-.
-.
-.
-.
 
-
+<br /><br /><br /><br /><br /><br />
 
 ### when code doesn’t do what you want
 
@@ -281,15 +238,7 @@ date_list_1 = [(2022,1,2),(2022,1,3),(2022,1,4)]
 
 <a href="https://htmlpreview.github.io/?https://github.com/k4th4/chatgpt_for_programming/blob/main/Function_Returns_None.html" target="_blank">Function Returns None.html</a>
 
-.
-.
-.
-.
-.
-.
-.
-.
-
+<br /><br /><br /><br /><br /><br />
 
 ### help with error messages
 
