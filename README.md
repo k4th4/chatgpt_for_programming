@@ -2,13 +2,9 @@
 
 ## Links
 - <a href="https://chat.openai.com/chat" target="_blank">Chat GPT</a>
-<br />
 - <a href="https://platform.openai.com/playground" target="_blank">OpenAI Playground</a>
-<br />
 - <a href="https://platform.openai.com/examples/default-fix-python-bugs" target="_blank">OpenAI Bugfix Example</a>
-<br />
 - <a href="https://platform.openai.com/examples/default-python-docstring" target="_blank">OpenAI Documentation Example</a>
-<br />
 - <a href="https://replit.com/@KatharinaNi/chatgpt-test#main.py" target="_blank">Repl for testing code</a>
 <br /><br /><br /><br />
 
