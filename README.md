@@ -35,8 +35,7 @@ Sarah Smith,1958-08-08,Paris
 陈伟,1985-12-12,香港
 ```
 
-[CSV File Data Output.html]({:target="_blank"}
-<a href="http://example.com/](https://htmlpreview.github.io/?https://github.com/k4th4/chatgpt_for_programming/blob/main/CSV_File_Data_Output.html" target="_blank">Hello, world!</a>
+<a href="https://htmlpreview.github.io/?https://github.com/k4th4/chatgpt_for_programming/blob/main/CSV_File_Data_Output.html" target="_blank">CSV File Data Output.html</a>
 
 ### write a simple function
 
@@ -55,8 +54,8 @@ def filter_by_age(csv_file):
     names = df[df['age'] < 60]['name'].tolist()
     return names
 ```
+<a href="https://htmlpreview.github.io/?https://github.com/k4th4/chatgpt_for_programming/blob/main/Filter_CSV_By_Age_Names.html" target="_blank">Filter CSV By Age Names.html</a>
 
-[Filter CSV By Age Names.html](Chatgbt%20for%20Programming%20dd116c5c556a4d848c17241a855eb015/Filter_CSV_By_Age_Names.html)
 
 ### write documentation
 
@@ -100,7 +99,7 @@ def filter_by_age(csv_file: str) -> List[str]:
     return names
 ```
 
-[Python Code Documentation Elements.html](Chatgbt%20for%20Programming%20dd116c5c556a4d848c17241a855eb015/Python_Code_Documentation_Elements.html)
+<a href="https://htmlpreview.github.io/?https://github.com/k4th4/chatgpt_for_programming/blob/main/Python_Code_Documentation_Elements.html" target="_blank">Python Code Documentation Elements.html</a>
 
 ### boilerplate example (flask)
 
@@ -150,7 +149,7 @@ if __name__ == '__main__':
 </html>
 ```
 
-[Flask TTS Pinyin App.html](Chatgbt%20for%20Programming%20dd116c5c556a4d848c17241a855eb015/Flask_TTS_Pinyin_App.html)
+<a href="https://htmlpreview.github.io/?https://github.com/k4th4/chatgpt_for_programming/blob/main/Flask_TTS_Pinyin_App.html" target="_blank">Flask TTS Pinyin App.html</a>
 
 ### asking questions about specific parts of the code
 
@@ -193,7 +192,8 @@ def date_func(date_list):
 date_list_1 = [(2022,1,2),(2022,1,3),(2022,1,4)]
 > 
 
-[Function Returns None.html](Chatgbt%20for%20Programming%20dd116c5c556a4d848c17241a855eb015/Function_Returns_None.html)
+
+<a href="https://htmlpreview.github.io/?https://github.com/k4th4/chatgpt_for_programming/blob/main/Function_Returns_None.html" target="_blank">Function Returns None.html</a>
 
 ### help with error messages
 
@@ -245,4 +245,5 @@ date = one_day_later(date)
 print(date)
 ```
 
-[Fix Datetime Error Message (1).html](Chatgbt%20for%20Programming%20dd116c5c556a4d848c17241a855eb015/Fix_Datetime_Error_Message_(1).html)
+
+ <a href="https://htmlpreview.github.io/?https://github.com/k4th4/chatgpt_for_programming/blob/main/Fix_Datetime_Error_Message_(1).html" target="_blank">Fix Datetime Error Message.html</a>
