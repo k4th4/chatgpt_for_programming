@@ -4,15 +4,48 @@
 graph LR
  A --- G[write simple functions]   
  A[ChatGPT for Programming] --> B[reduce typing work] 
- B --> H[documentation]
+ 
  B --> E[dummy data]
  B --> D[boilerplate]
+ B --> H[documentation]
  A --> C[Get help when you are stuck]
  C --- F[asking questions about parts of the code]
  C --> I[when code doesnt do what you want]
  C --> J[help with error messages]
 
 ```
+
+
+
+
+
+
+
+### write a simple function
+
+> write a python function that takes in a csv file with the columns: name, date of birth (YYYY-MM-DD), location. it filters out everyone who is older than 60 years and returns a list with all names. some names have Chinese characters.
+> 
+
+```python
+import pandas as pd
+from datetime import datetime
+
+def filter_by_age(csv_file):
+    df = pd.read_csv(csv_file, encoding='utf-8')
+    today = datetime.now().date()
+    df['date_of_birth'] = pd.to_datetime(df['date_of_birth'])
+    df['age'] = (today - df['date_of_birth'].dt.date).dt.days / 365
+    names = df[df['age'] < 60]['name'].tolist()
+    return names
+```
+<a href="https://htmlpreview.github.io/?https://github.com/k4th4/chatgpt_for_programming/blob/main/Filter_CSV_By_Age_Names.html" target="_blank">Filter CSV By Age Names.html</a>
+
+
+
+
+
+
+## Reduce typing work
 
 ### dummy data example
 
@@ -37,71 +70,16 @@ Sarah Smith,1958-08-08,Paris
 
 <a href="https://htmlpreview.github.io/?https://github.com/k4th4/chatgpt_for_programming/blob/main/CSV_File_Data_Output.html" target="_blank">CSV File Data Output.html</a>
 
-### write a simple function
-
-> write a python function that takes in a csv file with the columns: name, date of birth (YYYY-MM-DD), location. it filters out everyone who is older than 60 years and returns a list with all names. some names have Chinese characters.
-> 
-
-```python
-import pandas as pd
-from datetime import datetime
-
-def filter_by_age(csv_file):
-    df = pd.read_csv(csv_file, encoding='utf-8')
-    today = datetime.now().date()
-    df['date_of_birth'] = pd.to_datetime(df['date_of_birth'])
-    df['age'] = (today - df['date_of_birth'].dt.date).dt.days / 365
-    names = df[df['age'] < 60]['name'].tolist()
-    return names
-```
-<a href="https://htmlpreview.github.io/?https://github.com/k4th4/chatgpt_for_programming/blob/main/Filter_CSV_By_Age_Names.html" target="_blank">Filter CSV By Age Names.html</a>
 
 
-### write documentation
 
-> i want to create documentation for the following function with ‘mkdocstrings’. add type hints, and create a docstring which contains 5 examples, args and returns:
-```python
-def filter_by_age(csv_file):
- df = pd.read_csv(csv_file, encoding='utf-8')
- today = datetime.now().date()
- df['date_of_birth'] = pd.to_datetime(df['date_of_birth'])
- df['age'] = (today - df['date_of_birth'].dt.date).dt.days / 365
- names = df[df['age'] < 60]['name'].tolist()
- return names
-```
-Result:
 
-```python
-def filter_by_age(csv_file: str) -> List[str]:
-    """
-    Filters the names of individuals whose age is less than 60 years, from a CSV file.
 
-    Args:
-    - csv_file (str): The path of the CSV file containing information about individuals.
-                      The file should have at least two columns named 'name' and 'date_of_birth'.
 
-    Returns:
-    - List[str]: A list of names of individuals whose age is less than 60 years.
 
-    Example:
-    1. filter_by_age("people.csv") -> ['John Doe', 'Jane Doe']
-    2. filter_by_age("employees.csv") -> ['Bob Smith', 'Alice Johnson']
-    3. filter_by_age("students.csv") -> ['Michael Jordan', 'Kobe Bryant']
-    4. filter_by_age("teachers.csv") -> ['Jim Brown', 'Jerry Rice']
-    5. filter_by_age("colleagues.csv") -> ['Tom Cruise', 'Brad Pitt']
 
-    Note:
-    - The function assumes that the 'date_of_birth' column in the CSV file is in a valid datetime format.
-    """
-    df = pd.read_csv(csv_file, encoding='utf-8')
-    today = datetime.now().date()
-    df['date_of_birth'] = pd.to_datetime(df['date_of_birth'])
-    df['age'] = (today - df['date_of_birth'].dt.date).dt.days / 365
-    names = df[df['age'] < 60]['name'].tolist()
-    return names
-```
 
-<a href="https://htmlpreview.github.io/?https://github.com/k4th4/chatgpt_for_programming/blob/main/Python_Code_Documentation_Elements.html" target="_blank">Python Code Documentation Elements.html</a>
+
 
 ### boilerplate example (flask)
 
@@ -153,6 +131,72 @@ if __name__ == '__main__':
 
 <a href="https://htmlpreview.github.io/?https://github.com/k4th4/chatgpt_for_programming/blob/main/Flask_TTS_Pinyin_App.html" target="_blank">Flask TTS Pinyin App.html</a>
 
+
+
+
+
+
+
+
+
+
+### write documentation
+
+> i want to create documentation for the following function with ‘mkdocstrings’. add type hints, and create a docstring which contains 5 examples, args and returns:
+```python
+def filter_by_age(csv_file):
+ df = pd.read_csv(csv_file, encoding='utf-8')
+ today = datetime.now().date()
+ df['date_of_birth'] = pd.to_datetime(df['date_of_birth'])
+ df['age'] = (today - df['date_of_birth'].dt.date).dt.days / 365
+ names = df[df['age'] < 60]['name'].tolist()
+ return names
+```
+Result:
+
+```python
+def filter_by_age(csv_file: str) -> List[str]:
+    """
+    Filters the names of individuals whose age is less than 60 years, from a CSV file.
+
+    Args:
+    - csv_file (str): The path of the CSV file containing information about individuals.
+                      The file should have at least two columns named 'name' and 'date_of_birth'.
+
+    Returns:
+    - List[str]: A list of names of individuals whose age is less than 60 years.
+
+    Example:
+    1. filter_by_age("people.csv") -> ['John Doe', 'Jane Doe']
+    2. filter_by_age("employees.csv") -> ['Bob Smith', 'Alice Johnson']
+    3. filter_by_age("students.csv") -> ['Michael Jordan', 'Kobe Bryant']
+    4. filter_by_age("teachers.csv") -> ['Jim Brown', 'Jerry Rice']
+    5. filter_by_age("colleagues.csv") -> ['Tom Cruise', 'Brad Pitt']
+
+    Note:
+    - The function assumes that the 'date_of_birth' column in the CSV file is in a valid datetime format.
+    """
+    df = pd.read_csv(csv_file, encoding='utf-8')
+    today = datetime.now().date()
+    df['date_of_birth'] = pd.to_datetime(df['date_of_birth'])
+    df['age'] = (today - df['date_of_birth'].dt.date).dt.days / 365
+    names = df[df['age'] < 60]['name'].tolist()
+    return names
+```
+
+<a href="https://htmlpreview.github.io/?https://github.com/k4th4/chatgpt_for_programming/blob/main/Python_Code_Documentation_Elements.html" target="_blank">Python Code Documentation Elements.html</a>
+
+
+
+
+
+
+
+
+
+
+## Get help when you are stuck
+
 ### asking questions about specific parts of the code
 
 > why do i use .any(axis=1) in  mask = df[columns].apply(lambda x: x.str.contains(regex, case=False)).any(axis=1)
@@ -168,6 +212,12 @@ This **.apply()** operation is returning a DataFrame of boolean values, with eac
 The **.any(axis=1)** method is then used on the resulting dataframe. It checks whether any of the elements in each row of the Dataframe is **True**, by default it checks along the column axis i.e axis=0, but in this case, we are checking along the row axis i.e axis=1. It is used to check whether the regex match was found in any of the selected columns for a given row. The resulting boolean mask is a 1D array of size equal to the number of rows in the original dataframe. Each element of this mask array is **True** if there is at least one **True** value in the corresponding row of the DataFrame returned by the apply() method.
 Finally, this mask is assigned to the **mask** variable, which is used later on as a filter to select only the rows that do not match the regular expression from the original dataframe.
 ```
+
+
+
+
+
+
 
 ### when code doesn’t do what you want
 
@@ -196,6 +246,15 @@ date_list_1 = [(2022,1,2),(2022,1,3),(2022,1,4)]
 
 
 <a href="https://htmlpreview.github.io/?https://github.com/k4th4/chatgpt_for_programming/blob/main/Function_Returns_None.html" target="_blank">Function Returns None.html</a>
+
+
+
+
+
+
+
+
+
 
 ### help with error messages
 
