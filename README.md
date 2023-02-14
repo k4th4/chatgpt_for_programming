@@ -35,7 +35,7 @@ Sarah Smith,1958-08-08,Paris
 陈伟,1985-12-12,香港
 ```
 
-[CSV File Data Output.html](https://htmlpreview.github.io/?https://github.com/k4th4/chatgpt_for_programming#:~:text=CSV_File_Data_Output.html)
+[CSV File Data Output.html](https://htmlpreview.github.io/?https://github.com/k4th4/chatgpt_for_programming/blob/main/CSV_File_Data_Output.html)
 
 ### write a simple function
 
