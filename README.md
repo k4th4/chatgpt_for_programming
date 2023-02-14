@@ -60,6 +60,7 @@ def filter_by_age(csv_file):
 ### write documentation
 
 > i want to create documentation for the following function with ‘mkdocstrings’. add type hints, and create a docstring which contains 5 examples, args and returns:
+```python
 def filter_by_age(csv_file):
  df = pd.read_csv(csv_file, encoding='utf-8')
  today = datetime.now().date()
@@ -67,7 +68,8 @@ def filter_by_age(csv_file):
  df['age'] = (today - df['date_of_birth'].dt.date).dt.days / 365
  names = df[df['age'] < 60]['name'].tolist()
  return names
-> 
+```
+Result:
 
 ```python
 def filter_by_age(csv_file: str) -> List[str]:
