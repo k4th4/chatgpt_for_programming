@@ -15,9 +15,14 @@ graph LR
 
 ```
 
-
-
-
+.
+.
+.
+.
+.
+.
+.
+.
 
 
 
@@ -25,6 +30,8 @@ graph LR
 
 > write a python function that takes in a csv file with the columns: name, date of birth (YYYY-MM-DD), location. it filters out everyone who is older than 60 years and returns a list with all names. some names have Chinese characters.
 > 
+
+Result:
 
 ```python
 import pandas as pd
@@ -40,10 +47,14 @@ def filter_by_age(csv_file):
 ```
 <a href="https://htmlpreview.github.io/?https://github.com/k4th4/chatgpt_for_programming/blob/main/Filter_CSV_By_Age_Names.html" target="_blank">Filter CSV By Age Names.html</a>
 
-
-
-
-
+.
+.
+.
+.
+.
+.
+.
+.
 
 ## Reduce typing work
 
@@ -71,12 +82,14 @@ Sarah Smith,1958-08-08,Paris
 <a href="https://htmlpreview.github.io/?https://github.com/k4th4/chatgpt_for_programming/blob/main/CSV_File_Data_Output.html" target="_blank">CSV File Data Output.html</a>
 
 
-
-
-
-
-
-
+.
+.
+.
+.
+.
+.
+.
+.
 
 
 
@@ -133,10 +146,14 @@ if __name__ == '__main__':
 
 
 
-
-
-
-
+.
+.
+.
+.
+.
+.
+.
+.
 
 
 
@@ -188,9 +205,14 @@ def filter_by_age(csv_file: str) -> List[str]:
 
 
 
-
-
-
+.
+.
+.
+.
+.
+.
+.
+.
 
 
 
@@ -199,23 +221,35 @@ def filter_by_age(csv_file: str) -> List[str]:
 
 ### asking questions about specific parts of the code
 
-> why do i use .any(axis=1) in  mask = df[columns].apply(lambda x: x.str.contains(regex, case=False)).any(axis=1)
-> 
-
+what does this line on code: 
 ```python
-
-In this line of code:
-mask = df[columns].apply(lambda x: x.str.contains(regex, case=False)).any(axis=1)
-The **df[columns]** is used to select the columns specified in the 'columns' list from the Dataframe df.
-The **.apply()** method is then used to apply a lambda function to each column of the selected dataframe, this lambda function takes a column as input and returns a boolean Series indicating whether the regex was found in each element of the column using the **.str.contains(regex, case=False)** method.
-This **.apply()** operation is returning a DataFrame of boolean values, with each column representing one of the selected columns and each element of the column representing whether the regex match was found for the corresponding element of that column.
-The **.any(axis=1)** method is then used on the resulting dataframe. It checks whether any of the elements in each row of the Dataframe is **True**, by default it checks along the column axis i.e axis=0, but in this case, we are checking along the row axis i.e axis=1. It is used to check whether the regex match was found in any of the selected columns for a given row. The resulting boolean mask is a 1D array of size equal to the number of rows in the original dataframe. Each element of this mask array is **True** if there is at least one **True** value in the corresponding row of the DataFrame returned by the apply() method.
-Finally, this mask is assigned to the **mask** variable, which is used later on as a filter to select only the rows that do not match the regular expression from the original dataframe.
+pinyin_text = pinyin.get(text, format="strip", delimiter=" ")
 ```
+does in this function?
+```python
+def index():
+    if request.method == 'POST':
+        text = request.form['text']
+        pinyin_text = pinyin.get(text, format="strip", delimiter=" ")
+        tts = gTTS(text=text, lang='zh-cn')
+        tts.save("text_to_speech.mp3")
+        return render_template('index.html', text=text, pinyin=pinyin_text)
+    return render_template('index.html')
+```
+Result:
+
+>This line of code uses the pinyin library to convert the Chinese characters in the text variable into their corresponding pinyin pronunciations. The format="strip" argument tells the library to strip out any spaces between the pinyin syllables, and the delimiter=" " argument tells it to separate the syllables with a space. The resulting pinyin pronunciation is stored in the pinyin_text variable, which is then passed to the render_template function along with the original text variable, to be displayed on the webpage.
 
 
-
-
+<a href="https://htmlpreview.github.io/?https://github.com/k4th4/chatgpt_for_programming/blob/main/Convert%20Chinese%20to%20Pinyin.html" target="_blank">Function Explainer.html</a>
+.
+.
+.
+.
+.
+.
+.
+.
 
 
 
@@ -247,13 +281,14 @@ date_list_1 = [(2022,1,2),(2022,1,3),(2022,1,4)]
 
 <a href="https://htmlpreview.github.io/?https://github.com/k4th4/chatgpt_for_programming/blob/main/Function_Returns_None.html" target="_blank">Function Returns None.html</a>
 
-
-
-
-
-
-
-
+.
+.
+.
+.
+.
+.
+.
+.
 
 
 ### help with error messages
